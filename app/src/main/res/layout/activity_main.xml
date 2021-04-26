@@ -50,17 +50,21 @@
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifimageView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="157dp"
         android:layout_marginBottom="274dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sp_image" />
+        app:layout_constraintVertical_bias="1.0"
+        android:src="@drawable/invaders" />
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -76,7 +80,7 @@
         android:text="SPACE INVADERS"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/gifimageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -90,15 +94,16 @@
         android:layout_marginTop="33dp"
         android:layout_marginEnd="126dp"
         android:layout_marginRight="126dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/majormonodisplay"
         android:text="START"
         android:textSize="24sp"
         app:backgroundTint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/settings_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/gifimageView"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
