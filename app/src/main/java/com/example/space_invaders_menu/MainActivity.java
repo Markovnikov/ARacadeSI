@@ -29,6 +29,17 @@ public class MainActivity extends AppCompatActivity {
                 openSettings();
             }
         });
+
+
+        // code that sets up the scores button
+        toScores = (Button) findViewById(R.id.scores_button);
+        toScores.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openScores();
+            }
+        });
+
     }
 
     // code for the settings button function
@@ -37,5 +48,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    // code for the scores button function
+    public void openScores() {
+        Intent intent = new Intent(this, highscores_page.class);
+        startActivity(intent);
+    }
 
 }
