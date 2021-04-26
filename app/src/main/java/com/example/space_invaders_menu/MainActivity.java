@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // code for the settings button function 
+    // code for the settings button function
     public void openSettings() {
         Intent intent = new Intent(this, settings_page.class);
         startActivity(intent);
