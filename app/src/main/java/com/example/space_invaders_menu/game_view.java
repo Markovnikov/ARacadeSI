@@ -8,10 +8,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.ar.sceneform.ux.ArFragment;
 
 public class game_view extends AppCompatActivity {
 
+    private ArFragment arFragment;
     private Button shoot;
     int score;
 
@@ -20,7 +24,9 @@ public class game_view extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_view);
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.arFragment);
 
+        arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {});
 
         shoot = (Button) findViewById(R.id.shootButton);
         shoot.setOnClickListener(new View.OnClickListener() {
