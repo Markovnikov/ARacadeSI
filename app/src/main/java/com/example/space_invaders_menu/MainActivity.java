@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,13 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // code that sets up the settings button
         toSettings = (Button) findViewById(R.id.settings_button);
         toSettings.setOnClickListener(new View.OnClickListener(){
-            @Override
+
             public void onClick(View v) {
                 openSettings();
             }
@@ -40,11 +42,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        toStart = (Button) findViewById(R.id.start_button);
+        toStart.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) { toStart(); }
+        });
+
     }
 
     // code for the settings button function
     public void openSettings() {
         Intent intent = new Intent(this, settings_page.class);
+        startActivity(intent);
+    }
+
+    public void toStart() {
+        Intent intent = new Intent(this,game_view.class);
         startActivity(intent);
     }
 
